@@ -98,7 +98,7 @@ const App = () => {
         onChange={handleSearch}
       />
 
-      {isLoading ? (
+      {isLoading && inputRef.current?.value ? (
         <Box sx={{ display: "flex", m: 6 }}>
           <CircularProgress />
         </Box>
